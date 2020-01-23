@@ -9,8 +9,10 @@ import android.Manifest;
 import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 
 import com.example.cellphonetracker.Interfaces.ApiService;
+import com.example.cellphonetracker.adapter.CustomMarkerInfoWindowView;
 import com.example.cellphonetracker.adapter.DeviceAdapter;
 import com.example.cellphonetracker.serverCalls.NetworkClient;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -226,6 +228,19 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         googleMap.getUiSettings().setCompassEnabled(true);
         googleMap.getUiSettings().setMapToolbarEnabled(true);
         googleMap.getUiSettings().setZoomControlsEnabled(true);
+        googleMap.setInfoWindowAdapter(new GoogleMap.InfoWindowAdapter() {
+            @Override
+            public View getInfoWindow(Marker marker) {
+                View v = getLayoutInflater().inflate(R.layout.marker_info_window, null);
+
+                return v;
+            }
+
+            @Override
+            public View getInfoContents(Marker marker) {
+                return null;
+            }
+        });
 
         GpsTracker tracker = new GpsTracker(MainActivity.this);
         Double lat = tracker.getLat();
