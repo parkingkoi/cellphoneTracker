@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NotificationSeetingActivity">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:layout_gravity="center_vertical"
+            android:background="#EBEAEC"
+            android:layout_width="match_parent"
+            android:layout_height="80dp">
+
+            <ImageView
+                android:layout_marginTop="10dp"
+                android:id="@+id/back"
+                android:layout_marginLeft="10dp"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                app:srcCompat="@drawable/icons8_back_64" />
+
+            <TextView
+                android:id="@+id/title_setting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="2dp"
+                android:fontFamily="@font/poppins"
+                android:text="Setting Notification"
+                android:textColor="#000"
+                android:textSize="25sp" />
+        </LinearLayout>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"
+                android:orientation="vertical"
+                android:paddingTop="10dp">
+
+                <RelativeLayout
+                    android:id="@+id/rl_push_notification"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="10dp">
+
+                    <ImageView
+                        android:id="@+id/iv_notifi_settings"
+                        android:layout_width="25dp"
+                        android:layout_height="33dp"
+                        android:scaleType="fitXY"
+                        app:srcCompat="@drawable/push_notification_settings"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:id="@+id/tv_notification"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_toEndOf="@id/iv_notifi_settings"
+                        android:fontFamily="@font/poppins"
+                        android:text="Notification Alert"
+                        android:textColor="#000"
+                        android:textSize="18sp"
+                        tools:ignore="RelativeOverlap" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/switch_notification"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="#EBEAEC" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_location_settings"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="10dp">
+
+                    <ImageView
+                        android:id="@+id/iv_location_settings"
+                        android:layout_width="25dp"
+                        android:layout_height="40dp"
+                        android:layout_centerVertical="true"
+                        app:srcCompat="@drawable/location_settings"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:id="@+id/tv_your_location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_toEndOf="@id/iv_location_settings"
+                        android:fontFamily="@font/poppins"
+                        android:text="Your location"
+                        android:textColor="#7E606566"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_location_settings"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_your_location"
+                        android:layout_marginStart="10dp"
+                        android:layout_toEndOf="@id/iv_location_settings"
+                        android:fontFamily="@font/poppins"
+                        android:text="Address"
+                        android:textColor="#000"
+                        android:textSize="17sp" />
+
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="#7E606566" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_radis_settings"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="10dp">
+
+                    <ImageView
+                        android:id="@+id/iv_language_settings"
+                        android:layout_width="25dp"
+                        android:layout_height="40dp"
+                        android:layout_centerVertical="true"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:id="@+id/tv_your_language"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_toEndOf="@id/iv_language_settings"
+                        android:fontFamily="@font/poppins"
+                        android:text="Set up the range of notification."
+                        android:textColor="#7E606566"
+                        android:textSize="14sp" />
+                    <LinearLayout
+                        android:layout_toEndOf="@id/iv_language_settings"
+                        android:layout_below="@id/tv_your_language"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <EditText
+                            android:inputType="number"
+                            android:id="@+id/tv_radis"
+                            android:layout_width="60dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:fontFamily="@font/poppins"
+                            android:text="0"
+                            android:textColor="#000"
+                            android:textSize="17sp" />
+                        <TextView
+                            android:text="Meter"
+                            android:textSize="17sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                        </TextView>
+
+                    </LinearLayout>
+
+
+
+
+                </RelativeLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="#7E606566" />
+
+                <Button
+                    android:text="Save radius"
+                    android:id="@+id/save_btn"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </Button>
+
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

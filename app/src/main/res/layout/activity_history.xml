@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:background="#61E6E2E2"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FilterActivity">
+
+    <ImageView
+        android:id="@+id/back_btn"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:srcCompat="@drawable/icons8_back_64">
+    </ImageView>
+    <ScrollView
+        android:id="@+id/select_view"
+        android:layout_below="@+id/back_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <androidx.cardview.widget.CardView
+                android:id="@+id/select_date_card"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="0dp"
+
+                android:layout_width="match_parent"
+                android:layout_height="70dp">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_marginLeft="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@null"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Select the date"
+                        tools:ignore="DuplicateIds" />
+
+                    <TextView
+                        android:id="@+id/txt_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@null"
+                        android:text="yyyy-mm-dd"
+                        android:textColor="#000"
+                        android:textSize="20sp"
+                        tools:ignore="DuplicateIds" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:visibility="gone"
+                android:id="@+id/select_start_time_card"
+                android:layout_marginTop="20dp"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="0dp"
+
+                android:layout_width="match_parent"
+                android:layout_height="70dp">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_marginLeft="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@null"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Select start time"
+                        tools:ignore="DuplicateIds" />
+                    <TextView
+                        android:textColor="#000"
+                        android:textSize="20sp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@null"
+                        android:id="@+id/txt_start_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="0:0 am/pm"
+                        tools:ignore="DuplicateIds" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:visibility="gone"
+                android:layout_marginTop="10dp"
+                android:id="@+id/select_date_end"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="0dp"
+
+                android:layout_width="match_parent"
+                android:layout_height="70dp">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_marginLeft="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@null"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Select end data"
+                        tools:ignore="DuplicateIds" />
+
+                    <TextView
+                        android:id="@+id/txt_date_end"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@null"
+                        android:text="yyyy-mm-dd"
+                        android:textColor="#000"
+                        android:textSize="20sp"
+                        tools:ignore="DuplicateIds" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:visibility="gone"
+                android:id="@+id/select_end_time_card"
+                android:layout_marginTop="20dp"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="0dp"
+
+                android:layout_width="match_parent"
+                android:layout_height="70dp">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_marginLeft="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@null"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Select end time"
+                        tools:ignore="DuplicateIds" />
+                    <TextView
+                        android:textColor="#000"
+                        android:textSize="20sp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@null"
+                        android:id="@+id/txt_end_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="0:0 am/pm"
+                        tools:ignore="DuplicateIds" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <Button
+                android:text="Show history"
+                android:layout_marginTop="10dp"
+                android:id="@+id/search_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </Button>
+            <Button
+                android:text="Show All history"
+                android:layout_marginTop="10dp"
+                android:id="@+id/all_history_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </Button>
+            <Button
+                android:text="Show history of a day"
+                android:layout_marginTop="10dp"
+                android:id="@+id/show_history_of_day"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </Button>
+
+        </LinearLayout>
+    </ScrollView>
+    <androidx.recyclerview.widget.RecyclerView
+        android:visibility="gone"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/back_btn"
+        android:id="@+id/recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+
+</RelativeLayout>
